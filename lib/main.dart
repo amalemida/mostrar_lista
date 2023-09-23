@@ -21,7 +21,7 @@ List<String> frutas = ["Maça", "Banana", "Laranja", "Pera", "Jabuticaba", "Roma
     return Scaffold(
       appBar: AppBar(
         title: const Text("Exibição de uma Lista"),
-        backgroundColor: Colors.cyanAccent,
+        backgroundColor: Color.fromARGB(255, 224, 235, 103),
       ),
       body: Container(
         padding: const EdgeInsets.all(40),
