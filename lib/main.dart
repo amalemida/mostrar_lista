@@ -14,7 +14,7 @@ class Lista extends StatefulWidget {
 }
 
 class _ListaState extends State<Lista> {
-List<String> frutas = ["maça", "banana"];
+List<String> frutas = ["Maça", "Banana", "Laranja", "Pera", "Jabuticaba", "Roma", "Melão", "Mamão"];
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +27,10 @@ List<String> frutas = ["maça", "banana"];
         padding: const EdgeInsets.all(40),
         child: Column(
           children: <Widget>[
-            const Text("Lista"),
+            const Text("Lista de frutas"),
             const SizedBox(height: 10),
             Expanded(
-              child: ListView.builder(
+                child: ListView.builder(
                 itemCount: frutas.length,
                 itemBuilder: (context, index) {
                   return ListTile(
