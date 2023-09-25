@@ -14,27 +14,46 @@ class Lista extends StatefulWidget {
 }
 
 class _ListaState extends State<Lista> {
-List<String> frutas = ["Maça", "Banana", "Laranja", "Pera", "Jabuticaba", "Roma", "Melão", "Mamão"];
+  List<String> frutas = [
+    "Maçã",
+    "Banana",
+    "Laranja",
+    "Pera",
+    "Jabuticaba",
+    "Romã",
+    "Melão",
+    "Mamão",
+    "Manga"
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Exibição de uma Lista"),
-        backgroundColor: Color.fromARGB(255, 224, 235, 103),
+        title: const Center(child: Text("Exibição de uma Lista")),
+        backgroundColor: const Color.fromARGB(255, 158, 147, 99),
       ),
       body: Container(
         padding: const EdgeInsets.all(40),
         child: Column(
           children: <Widget>[
-            const Text("Lista de frutas"),
+            const Text(
+              "Lista de frutas",
+              style: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight
+                    .bold,
+              ),
+            ),
             const SizedBox(height: 10),
             Expanded(
-                child: ListView.builder(
+              child: ListView.builder(
                 itemCount: frutas.length,
                 itemBuilder: (context, index) {
+                  final indice = (index + 1)
+                      .toString(); // Convertendo o índice de int para string
                   return ListTile(
-                    title: Text(frutas[index]),
+                    title: Text("$indice - ${frutas[index]}"),
                   );
                 },
               ),
